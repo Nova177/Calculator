@@ -1,9 +1,14 @@
 ﻿namespace Calculator
 {
+    
     public class FibonacciSequence : ICalculationLogic
     {
         
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="io"></param>
+        /// <returns></returns>
         public double Calculation(IConsoleOutputInput io)
         {
 
