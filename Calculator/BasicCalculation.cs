@@ -7,12 +7,12 @@
         /// </summary>
         /// <param name="io"></param>
         /// <returns></returns>
-        public double Calculation(IConsoleOutputInput io)
+        public void Calculation(IConsoleOutputInput io)
         {
             
 
-            double number1 = io.Input();
-            double number2 = io.Input();
+            double number1 = io.Input("Nummer 1");
+            double number2 = io.Input("Nummer 2");
             char calculationTypes = io.GetOperator();
             double result;
 
@@ -20,21 +20,25 @@
             {
                 case '+':
                     result = number1 + number2;
+                    io.ResultOutput("Result: {0}", result);
                     break;
                 case '-':
                     result = number1 - number2;
+                    io.ResultOutput("Result:{0}", result);
                     break;
                 case '*':
                     result =  number1 * number2;
+                    io.ResultOutput("Result:{0}", result);
                     break;
                 case '/':
                     if(number2 != 0)
                     {
                         result = number1 / number2;
+                        io.ResultOutput("Result:{0}", result);
                     }
                     else
                     {
-                        return 0;
+                      
                         throw new Exception("Division by zero is not allowed.");
                         
                     }
@@ -43,7 +47,7 @@
                     throw new Exception("Invalid Operator");
                     
             }
-            return result;
+            
         }
 
 

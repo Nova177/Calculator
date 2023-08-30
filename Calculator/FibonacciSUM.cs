@@ -8,10 +8,10 @@ namespace Calculator
 {
     public class FibonacciSUM : ICalculationLogic
     {
-        public double Calculation(IConsoleOutputInput io)
+        public void Calculation(IConsoleOutputInput io)
         {
 
-            int number = Convert.ToInt32(io.Input());
+            int number = Convert.ToInt32(io.Input(""));
             int fn1 = 0;
             int fn2 = 1;
             int sum = fn1 + fn2;
@@ -23,7 +23,8 @@ namespace Calculator
                 fn1 = fn2;
                 fn2 = nextFibonacci;
             }
-            return sum;
+            io.ResultOutput($"The sum of each Fibonacci is: {sum}",sum);
+            
         }
     }
 }

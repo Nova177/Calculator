@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Calculator
 {
     /// <summary>
-    /// rovides input and output using the console.
+    /// Provides input and output using the console.
     /// </summary>
     public class ConsoleInputOutput : IConsoleOutputInput
     {
@@ -21,11 +21,18 @@ namespace Calculator
             Console.WriteLine("----Calculator----!");
         }
 
+        public void Instructions()
+        {
+            Console.WriteLine("Gib die Zahl 0 ein um deine Eingabe zu beenden!");
+        }
+
+
+
         /// <summary>
         /// Takes user input and converts it to a double.
         /// </summary>
         /// <returns>The user input as a double. Returns 0 if input is invalid.</returns>
-        public double Input()
+        public double Input(string input)
         {
             Console.Write("Enter a number: ");
             string input1 = Console.ReadLine();
@@ -56,9 +63,9 @@ namespace Calculator
         /// Displays the result to the user.
         /// </summary>
         /// <param name="result">The result to be displayed</param>
-       public void ResultOutput(double result)
+       public void ResultOutput(string output , double result)
         {
-            Console.WriteLine("Das Ergebnis ist : {0}", result);
+            Console.WriteLine(output,result);
             Console.ReadKey();
         }
     }

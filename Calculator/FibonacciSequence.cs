@@ -4,16 +4,12 @@
     public class FibonacciSequence : ICalculationLogic
     {
         
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="io"></param>
-        /// <returns></returns>
-        public double Calculation(IConsoleOutputInput io)
+        //überarbeiten weil du willst ggf doch eine Liste eingeben
+        public void Calculation(IConsoleOutputInput io)
         {
 
 
-            double fn = io.Input();
+            double fn = io.Input("");
             
 
 
@@ -22,7 +18,9 @@
             double fn2 = 1;
             double nextFibonacci = 0;
 
-            for (int i = 2; i <= fn - 1; i++)
+            io.ResultOutput("fib(0): {0}", fn1);
+            io.ResultOutput("fib(1): {0}", fn2);
+            for (int i = 2; i <= fn; i++)
             {
                 nextFibonacci = fn1 + fn2;
                 
@@ -31,10 +29,10 @@
 
                 fn1 = fn2;
                 fn2 = nextFibonacci;
-                io.ResultOutput(nextFibonacci);
+                io.ResultOutput($"fib({i}): {nextFibonacci}", nextFibonacci);
                 
             }
-            return nextFibonacci + fn1;
+            
         }
         
 

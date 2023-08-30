@@ -15,7 +15,7 @@ namespace Calculator
         private ICalculationLogic logic;
 
 
-        public Calculator(IConsoleOutputInput inputOutput, ICalculationLogic logic)
+        public Calculator(IConsoleOutputInput inputOutput, ICalculationLogic logic) // logic raus und in die Parameterliste von meiner Calculation Logic packen
         {
             this.inputOutput = inputOutput;
             this.logic = logic;
@@ -24,11 +24,12 @@ namespace Calculator
         /// <summary>
         /// Starts the calculator system, displaying a welcome message and performing a calculation.
         /// </summary>
-        public void CalculatorSystem()
+        public void CalculatorRun()
         {
             inputOutput.Welcome();
 
-            inputOutput.ResultOutput(logic.Calculation(inputOutput));
+            logic.Calculation(inputOutput);
+            //alles in die logic.Calculation(inputOutput) 
         }
     }
 }

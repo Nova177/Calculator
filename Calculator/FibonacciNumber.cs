@@ -12,18 +12,20 @@
         /// </summary>
         /// <param name="io">The input/output interface used for user interaction.</param>
         /// <returns>The Fibonacci number for the specified iteration</returns>
-        public double Calculation(IConsoleOutputInput io)
+        public void Calculation(IConsoleOutputInput io)
         {
             try
             {
-                fibonacciIteration = Convert.ToInt32(io.Input());
+                int result = 0;
+                fibonacciIteration = Convert.ToInt32(io.Input(""));
                 for (int i = 0; i <= fibonacciIteration - 1; i++)
                 {
                     result = fn1 + fn2;
                     fn2 = fn1;
                     fn1 = result;
+                    
                 }
-                return result;
+                io.ResultOutput($"fib({fibonacciIteration}): {result}", result);
             }
             catch (Exception ex)
             {
