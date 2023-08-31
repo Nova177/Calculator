@@ -5,11 +5,22 @@ using System.Linq;
 
 namespace Calculator
 {
+    /// <summary>
+    /// Represents a class for calculating various statistical quantities.
+    /// </summary>
     public class StatisticalQuantitiesCalculation : ICalculationLogic
     {
+        /// <summary>
+        /// Linked list for storing arithmetic values
+        /// </summary>
         public LinkedList<double> arithmeticList = new LinkedList<double>();
 
 
+        /// <summary>
+        /// Performs statistical calculations based on user input
+        /// Arithmetic Medium, Mode, Range, Mean Absolute Deviation (MAD), Variance and Standard Deviation
+        /// </summary>
+        /// <param name="io"></param>
         public void Calculation(IConsoleOutputInput io)
         {
             io.Instructions();

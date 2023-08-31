@@ -4,7 +4,7 @@
     public class FibonacciSequence : ICalculationLogic
     {
         
-        //überarbeiten weil du willst ggf doch eine Liste eingeben
+        
         public void Calculation(IConsoleOutputInput io)
         {
 
