@@ -1,5 +1,8 @@
 ﻿namespace Calculator
 {
+    /// <summary>
+    /// Represents a class for performing basic mathematical calculations on two numbers.
+    /// </summary>
     public class BasicCalculation : ICalculationLogic
     {
         /// <summary>
@@ -7,7 +10,7 @@
         /// </summary>
         /// <param name="io"></param>
         /// <returns></returns>
-        public void Calculation(IConsoleOutputInput io)
+        public void Calculation(IInputOutput io)
         {
             
 

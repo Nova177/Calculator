@@ -8,7 +8,7 @@ namespace Calculator
 {
     public interface ICalculationLogic 
     {
-        void Calculation(IConsoleOutputInput io); 
+        void Calculation(IInputOutput io); 
         
 
 

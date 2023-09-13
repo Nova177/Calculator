@@ -11,11 +11,15 @@ namespace Calculator
     /// </summary>
     public class Calculator
     {
-        private IConsoleOutputInput inputOutput;
+        private IInputOutput inputOutput;
         private ICalculationLogic logic;
 
-
-        public Calculator(IConsoleOutputInput inputOutput, ICalculationLogic logic) // logic raus und in die Parameterliste von meiner Calculation Logic packen
+        /// <summary>
+        /// Initializes a new instance of the Calculator class with the specified input/output and calculation logic components.
+        /// </summary>
+        /// <param name="inputOutput">The input/output component responsible for user interaction.</param>
+        /// <param name="logic">The calculation logic component responsible for performing calculations.</param>
+        public Calculator(IInputOutput inputOutput, ICalculationLogic logic) // logic raus und in die Parameterliste von meiner Calculation Logic packen
         {
             this.inputOutput = inputOutput;
             this.logic = logic;

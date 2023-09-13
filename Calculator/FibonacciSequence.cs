@@ -1,11 +1,17 @@
 ﻿namespace Calculator
 {
-    
+
+    /// <summary>
+    /// Represents a class for calculating Fibonacci sequence values.
+    /// </summary>
     public class FibonacciSequence : ICalculationLogic
     {
-        
-        
-        public void Calculation(IConsoleOutputInput io)
+
+        /// <summary>
+        /// Calculates Fibonacci sequence values up to the specified limit and displays the results.
+        /// </summary>
+        /// <param name="io">An instance of the input/output interface for user interaction.</param>
+        public void Calculation(IInputOutput io)
         {
 
 

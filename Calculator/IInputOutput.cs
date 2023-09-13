@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Calculator
 {
-     public interface IConsoleOutputInput
+     public interface IInputOutput
      {
        
         void Welcome();

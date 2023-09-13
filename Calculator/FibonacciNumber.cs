@@ -1,5 +1,8 @@
 ﻿namespace Calculator
 {
+    /// <summary>
+    /// Represents a class for calculating Fibonacci numbers up to a specified iteration using the Fibonacci sequence.
+    /// </summary>
     public class FibonacciNumber : ICalculationLogic
     {
         private int fibonacciIteration;
@@ -12,7 +15,7 @@
         /// </summary>
         /// <param name="io">The input/output interface used for user interaction.</param>
         /// <returns>The Fibonacci number for the specified iteration</returns>
-        public void Calculation(IConsoleOutputInput io)
+        public void Calculation(IInputOutput io)
         {
             try
             {

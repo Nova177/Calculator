@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace Calculator 
 {
+    /// <summary>
+    /// Represents a class for calculating the sum of Fibonacci numbers up to a specified limit.
+    /// </summary>
     public class FibonacciSUM : ICalculationLogic
     {
-        public void Calculation(IConsoleOutputInput io)
+        /// <summary>
+        /// Calculates the sum of Fibonacci numbers up to the specified limit using the provided input/output interface.
+        /// </summary>
+        /// <param name="io">The input/output interface used for user interaction.</param>
+        public void Calculation(IInputOutput io)
         {
 
             int number = Convert.ToInt32(io.Input(""));

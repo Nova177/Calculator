@@ -21,7 +21,7 @@ namespace Calculator
         /// Arithmetic Medium, Mode, Range, Mean Absolute Deviation (MAD), Variance and Standard Deviation
         /// </summary>
         /// <param name="io"></param>
-        public void Calculation(IConsoleOutputInput io)
+        public void Calculation(IInputOutput io)
         {
             io.Instructions();
             double input = 0;

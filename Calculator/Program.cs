@@ -6,7 +6,7 @@ namespace Calculator
     {
         public static void Main(string[] args)
         {
-            IConsoleOutputInput outputInput = new ConsoleInputOutput();
+            IInputOutput outputInput = new ConsoleInputOutput();
             ICalculationLogic logic = new StatisticalQuantitiesCalculation();
             Calculator calculator = new Calculator(outputInput, logic);
             //wpf logic ggf in der Program klasse handeln. Operationen entgegen nehmen bevor.

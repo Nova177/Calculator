@@ -10,7 +10,7 @@ namespace Calculator
     /// <summary>
     /// Provides input and output using the console.
     /// </summary>
-    public class ConsoleInputOutput : IConsoleOutputInput
+    public class ConsoleInputOutput : IInputOutput
     {
 
         /// <summary>
@@ -20,7 +20,9 @@ namespace Calculator
         {
             Console.WriteLine("----Calculator----!");
         }
-
+        /// <summary>
+        /// Tells the User how to break the loop
+        /// </summary>
         public void Instructions()
         {
             Console.WriteLine("Gib die Zahl 0 ein um deine Eingabe zu beenden!");
@@ -64,10 +66,12 @@ namespace Calculator
         /// </summary>
         /// <param name="result">The result to be displayed</param>
        public void ResultOutput(string output , double result)
-        {
+       {
             Console.WriteLine(output,result);
             Console.ReadKey();
-        }
+       }
+        
+        
     }
 }
 
